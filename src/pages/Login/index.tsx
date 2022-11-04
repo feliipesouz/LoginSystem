@@ -13,7 +13,7 @@ export const Login = () => {
       <h2>Página Fechada</h2>
       <input type="text" value={email} placeholder="Digite seu e-mail" />
       <input type="password" value={password} placeholder="Digite sua senha" />
-      <button onClick={handleLogin} />
+      <button onClick={handleLogin}>Login</button>
     </div>
   );
 };
