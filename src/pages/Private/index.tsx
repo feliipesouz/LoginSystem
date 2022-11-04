@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../contexts/Auth/AuthContext";
 
-type Props = {};
+const Private = () => {
+  const auth = useContext(AuthContext);
 
-const Private = (props: Props) => {
-  return <div>Página Privada</div>;
+  return (
+    <div>
+      <h2>Página Privada</h2>
+      Olá {auth.user?.name}, tudo bem?
+    </div>
+  );
 };
 
 export default Private;

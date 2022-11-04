@@ -8,8 +8,8 @@ import { AuthContext } from "./AuthContext";
 export const RequireAuth = ({ children }: { children: JSX.Element }) => {
   //Recebo um children porque é um component dentro de outro(a página que queremos acessar).
   const auth = useContext(AuthContext);
-  if(!auth.user){
-    return <Login/>
+  if (!auth.user) {
+    return <Login />;
   }
   return children;
 };
