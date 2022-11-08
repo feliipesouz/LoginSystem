@@ -7,19 +7,21 @@ const api = axios.create({
 export const useApi = () => ({
   //CustomHook
   validateToken: async (token: string) => {
-    const response = await api.post("/validate", { token });
-    return response.data;
+    return { user: { id: 3, name: "Felipe", email: "felipearruda@gmail.com" } };
+    //const response = await api.post("/validate", { token });
+    //return response.data;
   },
   signin: async (email: string, password: string) => {
     return {
       user: { id: 3, name: "Felipe", email: "felipearruda@gmail.com" },
       token: "123456789",
     };
-    const response = await api.post("/signin", { email, password });
-    return response.data;
+    //const response = await api.post("/signin", { email, password });
+    //return response.data;
   },
   logout: async () => {
-    const response = await api.post("/logout");
-    return response.data;
+    return { status: true };
+    //const response = await api.post("/logout");
+    //return response.data;
   },
 });
